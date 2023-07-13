@@ -2,3 +2,4 @@
 *.class
 # Log file
 *.log
+/build/
