@@ -148,6 +148,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
         jblResultado.setText("resultado");
         jblResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
+        jblResultadoTitulo.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
         jblResultadoTitulo.setText("Resultado");
 
         javax.swing.GroupLayout jpConversorLayout = new javax.swing.GroupLayout(jpConversor);
