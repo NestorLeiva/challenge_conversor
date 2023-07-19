@@ -4,21 +4,22 @@
  */
 package GUI;
 
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
- * @author nesto
+ * @author nestor
  */
 public class frmPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form frmPrincipal
      */
-    
-    
     private frmPrincipal frm_principal = null;
     private frmConversorDivisa frm_ConDivisa = null;
     private frmConversorDistancia frm_distancia = null;
-    private frmAbout frm_about = null;
     
     public frmPrincipal() {
         initComponents();
@@ -51,6 +52,9 @@ public class frmPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Challenge Conversor");
         setPreferredSize(new java.awt.Dimension(800, 800));
+        setResizable(false);
+
+        desktopPane.setMaximumSize(new java.awt.Dimension(800, 800));
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("File");
@@ -160,14 +164,25 @@ public class frmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
     private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
-        // TODO add your handling code here:
-        frm_ConDivisa = new frmConversorDivisa();
-        this.desktopPane.add(frm_ConDivisa);
+        /**
+         * verifica que el objeto frm_ConDivisa sea Null o este cerrado
+         * para agregarlo al panel del objeto principal 
+         * luego se indica que este sea visible
+         */
+        
+        if (frm_ConDivisa == null || frm_ConDivisa.isClosed()) {
+            frm_ConDivisa = new frmConversorDivisa();
+            this.desktopPane.add(frm_ConDivisa);
+          
+        }
         frm_ConDivisa.setVisible(true);
+        
     }//GEN-LAST:event_saveMenuItemActionPerformed
 
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
-        // TODO add your handling code here:
+        // Barra Meni Inicio... setea los objetos en False
+ 
+        
     }//GEN-LAST:event_openMenuItemActionPerformed
 
     private void fileMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileMenuActionPerformed
@@ -175,15 +190,26 @@ public class frmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_fileMenuActionPerformed
 
     private void saveAsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveAsMenuItemActionPerformed
-        // TODO add your handling code here:
-        frm_distancia = new frmConversorDistancia();
-        this.desktopPane.add(frm_distancia);
+         /**
+         * verifica que el objeto frm_ConDivisa sea Null o este cerrado
+         * para agregarlo al panel del objeto principal 
+         * luego se indica que este sea visible
+         */
+        if (frm_distancia == null || frm_distancia.isClosed()) {
+            
+            frm_distancia = new frmConversorDistancia();
+            this.desktopPane.add(frm_distancia);   }
         frm_distancia.setVisible(true);
+        
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
 
     private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
-        // TODO add your handling code here:
-        frm_about = new frmAbout();
+        /**
+         * Se crea e inicializa el objeto
+         * se anade el objeto al objeto principal 
+         * luego se indica que sea visible
+         */
+        frmAbout frm_about = new frmAbout();
         this.desktopPane.add(frm_about);
         frm_about.setVisible(true);
     }//GEN-LAST:event_aboutMenuItemActionPerformed
