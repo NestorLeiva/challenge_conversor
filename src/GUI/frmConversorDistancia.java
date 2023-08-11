@@ -54,7 +54,7 @@ public class frmConversorDistancia extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setTitle("Conversor de Distancia");
-        setPreferredSize(new java.awt.Dimension(800, 800));
+        setPreferredSize(new java.awt.Dimension(785, 800));
 
         jpTitulo.setBackground(new java.awt.Color(255, 255, 0));
         jpTitulo.setPreferredSize(new java.awt.Dimension(800, 140));
