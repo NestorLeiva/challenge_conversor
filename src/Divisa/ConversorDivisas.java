@@ -1,12 +1,9 @@
 package Divisa;
 
-
-
 public class ConversorDivisas {
 
     private double valor;
     private int divisaPrincipal;
-    private int divisaFinal;
     private double resultado;
 
     public ConversorDivisas() {
@@ -28,14 +25,6 @@ public class ConversorDivisas {
         this.divisaPrincipal = divisaPrincipal;
     }
 
-    public int getDivisaFinal() {
-        return divisaFinal;
-    }
-
-    public void setDivisaFinal(int divisaFinal) {
-        this.divisaFinal = divisaFinal;
-    }
-
     public double getResultado() {
         return resultado;
     }
@@ -45,13 +34,15 @@ public class ConversorDivisas {
     }
 
     public double conversion() {
-        if ( divisaPrincipal == 0 && divisaFinal == 1 
-                  ) {
-            resultado = valor * 538.50;
-        }else if (divisaPrincipal == 1 && divisaFinal == 2){
-            resultado = valor * 0.79;
-        }else if (divisaPrincipal == 0 && divisaFinal == 0){
-            resultado = valor ;
+
+        if (divisaPrincipal == 1){
+        resultado = valor * 535.09;
+        } else if (divisaPrincipal == 2){
+        resultado = valor * 0.0015;
+        }else if (divisaPrincipal == 3 ){
+        resultado = valor * 0.27;
+        } else if (divisaPrincipal == 4){
+        resultado = valor * 2.49;
         }
         return resultado;
     }

@@ -103,7 +103,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -124,8 +124,6 @@
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="btnNumeroAtras" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="btnNumero_0" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="btnNumeroPunto" min="-2" pref="90" max="-2" attributes="0"/>
@@ -145,32 +143,23 @@
                           <Component id="btnConvertir" min="-2" pref="180" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="jblResultadoTitulo" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jtxtResultado" min="-2" pref="295" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jblDivisa_1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cboDivisaPrincipal" min="-2" pref="334" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jtxtResultado" alignment="0" min="-2" pref="401" max="-2" attributes="0"/>
                               <Component id="btnNuevaConversion" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                          <Component id="jblResultadoTitulo" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="327" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jblDivisa_1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jblDivisa_2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="cboDivisaPrincipal" max="32767" attributes="0"/>
-                              <Component id="cboDivisaSecundaria" max="32767" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -178,58 +167,60 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="cboDivisaPrincipal" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="jblDivisa_1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jtxtDisplay" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="btnNumero_1" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="btnNumero_2" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="btnNumero_3" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="btnNumero_4" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                              <Component id="btnNumero_5" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                              <Component id="btnNumero_6" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="btnNumero_7" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                              <Component id="btnNumero_8" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                              <Component id="btnNumero_9" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jtxtResultado" min="-2" pref="72" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="btnNumero_0" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="btnNumeroPunto" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                      <Component id="btnNuevaConversion" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="272" pref="272" max="-2" attributes="0"/>
+                                  <Component id="btnConvertir" min="-2" pref="50" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cboDivisaSecundaria" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="jblDivisa_2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cboDivisaPrincipal" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="jblDivisa_1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jblResultadoTitulo" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jtxtResultado" min="-2" pref="200" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnNuevaConversion" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="btnConvertir" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jtxtDisplay" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnNumero_1" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="btnNumero_2" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="btnNumero_3" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnNumero_4" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="btnNumero_5" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="btnNumero_6" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnNumero_7" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="btnNumero_8" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="btnNumero_9" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="btnNumero_0" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="btnNumeroPunto" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="btnNumeroAtras" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <EmptySpace pref="118" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -387,29 +378,21 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Comic Sans MS" size="18" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Divisa Principal"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jblDivisa_2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="18" style="2"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Divisa Secundaria"/>
+            <Property name="text" type="java.lang.String" value="Divisa "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="cboDivisaPrincipal">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="14" style="2"/>
+              <Font name="Comic Sans MS" size="12" style="2"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="5">
-                <StringItem index="0" value="Colon Costarricecnse - CRC"/>
-                <StringItem index="1" value="Dolar Americano - USD"/>
-                <StringItem index="2" value="Libra Esterlina - GBP"/>
-                <StringItem index="3" value="Yen  Japones - JPY"/>
-                <StringItem index="4" value="Won surcoreano - KRW"/>
+                <StringItem index="0" value="Seleccione ..."/>
+                <StringItem index="1" value="Colon Costarricecnse - CRC / Dolar Americano - USD"/>
+                <StringItem index="2" value="Colon Costarricecnse - CRC / Libra Esterlina - GBP"/>
+                <StringItem index="3" value="Colon Costarricecnse - CRC / Yen  Japones - JPY"/>
+                <StringItem index="4" value="Colon Costarricecnse - CRC / Won surcoreano - KRW"/>
               </StringArray>
             </Property>
           </Properties>
@@ -419,36 +402,6 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="cboDivisaSecundaria">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="14" style="2"/>
-            </Property>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
-                <StringItem index="0" value="Colon Costarricecnse - CRC"/>
-                <StringItem index="1" value="Dolar Americano - USD"/>
-                <StringItem index="2" value="Libra Esterlina - GBP"/>
-                <StringItem index="3" value="Yen  Japones - JPY"/>
-                <StringItem index="4" value="Won surcoreano - KRW"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnNumeroAtras">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="sansserif" size="24" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="C"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNumeroAtrasActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jblResultadoTitulo">
           <Properties>
