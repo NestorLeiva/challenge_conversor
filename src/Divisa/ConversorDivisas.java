@@ -44,6 +44,13 @@ public class ConversorDivisas {
 
     
     public double conversion() {
+        /* por medio del 2 Switch anidados se hace la conversion de cada tipo de divisa 
+        en el 1 Switch estas las divisas del comboBox 1... 
+        en el 2 Switch estan las divisas del comboBox 2 ... 
+        en cada Switch de divisaPrincipal se anida el segundo Switch para asi realizar la operacion 
+        y hacer un return con el valor de la operacion
+        los valores de cada Divisa fueron obtenidos el dia 19/8/2023
+        */
         switch (divisaPrincipal) {
             case 0: // CRC
                 switch (divisaSecundaria) {
