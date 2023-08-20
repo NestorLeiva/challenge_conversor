@@ -4,9 +4,18 @@ public class ConversorDivisas {
 
     private double valor;
     private int divisaPrincipal;
-    private double resultado;
+    private int divisaSecundaria;
+    private double resultado = 0;
 
     public ConversorDivisas() {
+    }
+
+    public int getDivisaSecundaria() {
+        return divisaSecundaria;
+    }
+
+    public void setDivisaSecundaria(int divisaSecundaria) {
+        this.divisaSecundaria = divisaSecundaria;
     }
 
     public double getValor() {
@@ -33,17 +42,106 @@ public class ConversorDivisas {
         this.resultado = resultado;
     }
 
+    
     public double conversion() {
+        switch (divisaPrincipal) {
+            case 0: // CRC
+                switch (divisaSecundaria) {
+                    case 0: // CRC
+                        resultado = valor;
+                        break;
+                    case 1: // USD
+                        resultado = valor * 0.0019;
+                        break;
+                    case 2:// libra esterlina
+                        resultado = valor * 0.0015;
+                        break;
+                    case 3: // yen japones
+                        resultado = valor * 0.27;
+                        break;
+                    case 4: // won sur coreano
+                        resultado = valor * 2.52;
+                        break;
+                } // fin divisaSecundaria
+                break;
+            case 1: // USD
+                switch (divisaSecundaria) {
+                    case 0: // CRC
+                        resultado = valor * 532.25;
+                        break;
+                    case 1: // USD
+                        resultado = valor;
+                        break;
+                    case 2:// libra esterlina
+                        resultado = valor * 0.79;
+                        break;
+                    case 3: // yen japones
+                        resultado = valor * 145.42;
+                        break;
+                    case 4: // won sur coreano
+                        resultado = valor * 1340.16;
+                        break;
+                } // fin divisaSecundaria
+                break;
+            case 2: // Libra Esterlina
+                switch (divisaSecundaria) {
+                    case 0: // CRC
+                        resultado = valor * 677.77;
+                        break;
+                    case 1: // USD
+                        resultado = valor* 1.27;
+                        break;
+                    case 2:// libra esterlina
+                        resultado = valor ;
+                        break;
+                    case 3: // yen japones
+                        resultado = valor * 185.41;
+                        break;
+                    case 4: // won sur coreano
+                        resultado = valor * 1706.57;
+                        break;
+                } // fin divisaSecundaria
+                break;
+            case 3 : // yen Japones
+                switch (divisaSecundaria) {
+                    case 0: // CRC
+                        resultado = valor * 3.666;
+                        break;
+                    case 1: // USD
+                        resultado = valor * 0.0069;
+                        break;
+                    case 2:// libra esterlina
+                        resultado = valor * 0.0054;
+                        break;
+                    case 3: // yen japones
+                        resultado = valor;
+                        break;
+                    case 4: // won sur coreano
+                        resultado = valor * 9.22;
+                        break;
+                } // fin divisaSecundaria
+                break;
+            case 4: // won sur Coreano
+                switch (divisaSecundaria) {
+                    case 0: // CRC
+                        resultado = valor * 0.40;
+                        break;
+                    case 1: // USD
+                        resultado = valor * 0.00075;
+                        break;
+                    case 2:// libra esterlina
+                        resultado = valor * 0.00059;
+                        break;
+                    case 3: // yen japones
+                        resultado = valor * 0.11;
+                        break;
+                    case 4: // won sur coreano
+                        resultado = valor ;
+                        break;
+                } // fin divisaSecundaria
+                break;
 
-        if (divisaPrincipal == 1){
-        resultado = valor * 535.09;
-        } else if (divisaPrincipal == 2){
-        resultado = valor * 0.0015;
-        }else if (divisaPrincipal == 3 ){
-        resultado = valor * 0.27;
-        } else if (divisaPrincipal == 4){
-        resultado = valor * 2.49;
-        }
+        }// fin divisaPrincipal
         return resultado;
     }
 

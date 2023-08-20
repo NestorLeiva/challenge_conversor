@@ -19,7 +19,7 @@ public class frmPrincipal extends javax.swing.JFrame {
      */
     private frmPrincipal frm_principal = null;
     private frmConversorDivisa frm_ConDivisa = null;
-    private frmConversorDistancia frm_distancia = null;
+    private frmConversorTemperatura frm_distancia = null;
     
     public frmPrincipal() {
         initComponents();
@@ -171,7 +171,7 @@ public class frmPrincipal extends javax.swing.JFrame {
          */
         if (frm_distancia == null || frm_distancia.isClosed()) {
             
-            frm_distancia = new frmConversorDistancia();
+            frm_distancia = new frmConversorTemperatura();
             this.desktopPane.add(frm_distancia);   }
         frm_distancia.setVisible(true);
         
