@@ -1,4 +1,4 @@
-package Divisa;
+package Conversiones;
 
 public class ConversorDivisas {
 
