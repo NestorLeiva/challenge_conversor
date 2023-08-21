@@ -1,16 +1,23 @@
 package GUI;
+
 import Conversiones.ConversorDivisas;
+import java.awt.*;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 public class frmConversorDivisa extends javax.swing.JInternalFrame {
-
+    
     public frmConversorDivisa() {
+        //this.setContentPane(fondo);
         initComponents();
+        
     }
-
-    protected double valor;
-    protected int divisaPrincipal;
-    protected int divisaSecundaria;
-    protected double resultadoFinal;
+//    FondoPanel fondo = new FondoPanel();
+    
+    private double valor;
+    private int divisaPrincipal;
+    private int divisaSecundaria;
+    private double resultadoFinal;
     // objeto 
     ConversorDivisas enlace;
     
@@ -18,9 +25,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jpTitulo = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jpConversor = new javax.swing.JPanel();
+        jPanelConversor = new javax.swing.JPanel();
         jtxtDisplay = new javax.swing.JTextField();
         btnNumero_1 = new javax.swing.JButton();
         btnNumero_2 = new javax.swing.JButton();
@@ -34,13 +39,15 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
         btnNumero_0 = new javax.swing.JButton();
         btnConvertir = new javax.swing.JButton();
         btnNumeroPunto = new javax.swing.JButton();
-        jblDivisa_1 = new javax.swing.JLabel();
         cboDivisaPrincipal = new javax.swing.JComboBox<>();
-        jblResultadoTitulo = new javax.swing.JLabel();
         btnNuevaConversion = new javax.swing.JButton();
         jtxtResultado = new javax.swing.JTextField();
-        jblDivisa_2 = new javax.swing.JLabel();
         cboDivisaSecundaria = new javax.swing.JComboBox<>();
+        btnDivisa1 = new javax.swing.JButton();
+        btnDivisa2 = new javax.swing.JButton();
+        btnResultado = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -51,37 +58,13 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(785, 780));
         setRequestFocusEnabled(false);
 
-        jpTitulo.setBackground(new java.awt.Color(255, 255, 0));
-        jpTitulo.setPreferredSize(new java.awt.Dimension(800, 140));
-
-        jLabel1.setFont(new java.awt.Font("sansserif", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Conversor de Divisas");
-
-        javax.swing.GroupLayout jpTituloLayout = new javax.swing.GroupLayout(jpTitulo);
-        jpTitulo.setLayout(jpTituloLayout);
-        jpTituloLayout.setHorizontalGroup(
-            jpTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTituloLayout.createSequentialGroup()
-                .addGap(232, 232, 232)
-                .addComponent(jLabel1)
-                .addContainerGap(231, Short.MAX_VALUE))
-        );
-        jpTituloLayout.setVerticalGroup(
-            jpTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTituloLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel1)
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jpTitulo, java.awt.BorderLayout.PAGE_START);
-
-        jpConversor.setBackground(new java.awt.Color(102, 102, 102));
-        jpConversor.setPreferredSize(new java.awt.Dimension(800, 800));
+        jPanelConversor.setBackground(new java.awt.Color(51, 51, 255));
+        jPanelConversor.setEnabled(false);
+        jPanelConversor.setPreferredSize(new java.awt.Dimension(800, 800));
 
         jtxtDisplay.setFont(new java.awt.Font("Comic Sans MS", 3, 18)); // NOI18N
         jtxtDisplay.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtxtDisplay.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jtxtDisplay.setMaximumSize(new java.awt.Dimension(100, 100));
         jtxtDisplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +79,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_1.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_1.setText("1");
+        btnNumero_1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_1ActionPerformed(evt);
@@ -104,6 +88,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_2.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_2.setText("2");
+        btnNumero_2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_2ActionPerformed(evt);
@@ -112,6 +97,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_3.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_3.setText("3");
+        btnNumero_3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_3ActionPerformed(evt);
@@ -120,6 +106,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_4.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_4.setText("4");
+        btnNumero_4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_4ActionPerformed(evt);
@@ -128,6 +115,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_5.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_5.setText("5");
+        btnNumero_5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_5ActionPerformed(evt);
@@ -136,6 +124,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_6.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_6.setText("6");
+        btnNumero_6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_6ActionPerformed(evt);
@@ -144,6 +133,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_7.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_7.setText("7");
+        btnNumero_7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_7ActionPerformed(evt);
@@ -152,6 +142,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_8.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_8.setText("8");
+        btnNumero_8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_8ActionPerformed(evt);
@@ -160,6 +151,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_9.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_9.setText("9");
+        btnNumero_9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_9ActionPerformed(evt);
@@ -168,6 +160,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumero_0.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumero_0.setText("0");
+        btnNumero_0.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumero_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_0ActionPerformed(evt);
@@ -176,6 +169,7 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnConvertir.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         btnConvertir.setText("Convertir");
+        btnConvertir.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConvertirActionPerformed(evt);
@@ -184,28 +178,25 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
         btnNumeroPunto.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         btnNumeroPunto.setText(".");
+        btnNumeroPunto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNumeroPunto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumeroPuntoActionPerformed(evt);
             }
         });
 
-        jblDivisa_1.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
-        jblDivisa_1.setText("Divisa ");
-
         cboDivisaPrincipal.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
         cboDivisaPrincipal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Colon Costarricecnse - CRC", "Dolar Americano - USD", "Libra Esterlina - GBP", "Yen  Japones - JPY", "Won surcoreano - KRW" }));
+        cboDivisaPrincipal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         cboDivisaPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboDivisaPrincipalActionPerformed(evt);
             }
         });
 
-        jblResultadoTitulo.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
-        jblResultadoTitulo.setText("Resultado");
-
         btnNuevaConversion.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         btnNuevaConversion.setText("Nueva Conversion");
+        btnNuevaConversion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnNuevaConversion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevaConversionActionPerformed(evt);
@@ -215,122 +206,162 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
         jtxtResultado.setEditable(false);
         jtxtResultado.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         jtxtResultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jblDivisa_2.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
-        jblDivisa_2.setText("Divisa ");
+        jtxtResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         cboDivisaSecundaria.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
         cboDivisaSecundaria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Colon Costarricecnse - CRC", "Dolar Americano - USD", "Libra Esterlina - GBP", "Yen  Japones - JPY", "Won surcoreano - KRW" }));
+        cboDivisaSecundaria.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         cboDivisaSecundaria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboDivisaSecundariaActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jpConversorLayout = new javax.swing.GroupLayout(jpConversor);
-        jpConversor.setLayout(jpConversorLayout);
-        jpConversorLayout.setHorizontalGroup(
-            jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpConversorLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jpConversorLayout.createSequentialGroup()
-                                .addComponent(btnNumero_7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnNumero_8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnNumero_9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jpConversorLayout.createSequentialGroup()
-                                .addComponent(btnNumero_4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnNumero_5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnNumero_6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpConversorLayout.createSequentialGroup()
-                                .addComponent(btnNumero_0, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnNumeroPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpConversorLayout.createSequentialGroup()
-                                .addComponent(btnNumero_1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnNumero_2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnNumero_3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jtxtDisplay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpConversorLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30)
-                .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtxtResultado, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-                    .addComponent(btnNuevaConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblResultadoTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jpConversorLayout.createSequentialGroup()
-                            .addComponent(jblDivisa_2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(cboDivisaSecundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jpConversorLayout.createSequentialGroup()
-                            .addComponent(jblDivisa_1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(cboDivisaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(45, Short.MAX_VALUE))
-        );
-        jpConversorLayout.setVerticalGroup(
-            jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpConversorLayout.createSequentialGroup()
-                .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpConversorLayout.createSequentialGroup()
+        btnDivisa1.setFont(new java.awt.Font("Comic Sans MS", 2, 16)); // NOI18N
+        btnDivisa1.setText("Divisa");
+        btnDivisa1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+
+        btnDivisa2.setFont(new java.awt.Font("Comic Sans MS", 2, 16)); // NOI18N
+        btnDivisa2.setText("Divisa");
+        btnDivisa2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+
+        btnResultado.setFont(new java.awt.Font("Comic Sans MS", 2, 16)); // NOI18N
+        btnResultado.setText("Resultado");
+        btnResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+
+        javax.swing.GroupLayout jPanelConversorLayout = new javax.swing.GroupLayout(jPanelConversor);
+        jPanelConversor.setLayout(jPanelConversorLayout);
+        jPanelConversorLayout.setHorizontalGroup(
+            jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelConversorLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelConversorLayout.createSequentialGroup()
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelConversorLayout.createSequentialGroup()
+                                    .addComponent(btnNumero_7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNumero_8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNumero_9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelConversorLayout.createSequentialGroup()
+                                    .addComponent(btnNumero_4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNumero_5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNumero_6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelConversorLayout.createSequentialGroup()
+                                    .addComponent(btnNumero_1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNumero_2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNumero_3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanelConversorLayout.createSequentialGroup()
+                                    .addComponent(btnNumero_0, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnNumeroPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(40, 40, 40)
-                        .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cboDivisaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jblDivisa_1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cboDivisaSecundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jblDivisa_2))
-                        .addGap(36, 36, 36)
-                        .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpConversorLayout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addComponent(jtxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(46, 46, 46)
-                                .addComponent(btnNuevaConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jblResultadoTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jpConversorLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jtxtDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelConversorLayout.createSequentialGroup()
+                                    .addComponent(btnDivisa1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cboDivisaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelConversorLayout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(btnResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanelConversorLayout.createSequentialGroup()
+                                            .addComponent(btnDivisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(16, 16, 16)
+                                            .addComponent(cboDivisaSecundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(btnNuevaConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jtxtDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+        jPanelConversorLayout.setVerticalGroup(
+            jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelConversorLayout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jtxtDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelConversorLayout.createSequentialGroup()
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNumero_1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNumero_2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNumero_3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpConversorLayout.createSequentialGroup()
-                                .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnNumero_1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnNumero_2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnNumero_3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnNumero_4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnNumero_5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnNumero_6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(15, 15, 15)
-                                .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnNumero_7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnNumero_8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnNumero_9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnNumero_0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnNumeroPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jpConversorLayout.createSequentialGroup()
-                                .addGap(272, 272, 272)
-                                .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(388, Short.MAX_VALUE))
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNumero_4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNumero_5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNumero_6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelConversorLayout.createSequentialGroup()
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cboDivisaPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDivisa1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cboDivisaSecundaria, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDivisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelConversorLayout.createSequentialGroup()
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNumero_7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNumero_8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNumero_9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnNumero_0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNumeroPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(45, 45, 45))
+                    .addGroup(jPanelConversorLayout.createSequentialGroup()
+                        .addComponent(btnResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jtxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)))
+                .addGroup(jPanelConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelConversorLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(btnNuevaConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jpConversor, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanelConversor, java.awt.BorderLayout.CENTER);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 140));
+
+        jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Conversor Divisa");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(158, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -420,21 +451,18 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
             // camptura de los datos del comboBox // realiza la captura de un arreglo devolviendo un valor numerico
             divisaPrincipal = cboDivisaPrincipal.getSelectedIndex();
             divisaSecundaria = cboDivisaSecundaria.getSelectedIndex();
-            
-            
+
             // envio los datos por medio del metodo set
             enlace.setValor(valor);
             enlace.setDivisaPrincipal(divisaPrincipal);
             enlace.setDivisaSecundaria(divisaSecundaria);
-            
-            
+
             // ejecuto la operacion
-            
             resultadoFinal = enlace.conversion();
 
             // muestro el resultado     
             jtxtResultado.setText("" + resultadoFinal);
-            jtxtDisplay.setText("");
+            
         } catch (Exception e) {
             e.getMessage();
         }
@@ -453,6 +481,8 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConvertir;
+    private javax.swing.JButton btnDivisa1;
+    private javax.swing.JButton btnDivisa2;
     private javax.swing.JButton btnNuevaConversion;
     private javax.swing.JButton btnNumeroPunto;
     private javax.swing.JButton btnNumero_0;
@@ -465,15 +495,27 @@ public class frmConversorDivisa extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnNumero_7;
     private javax.swing.JButton btnNumero_8;
     private javax.swing.JButton btnNumero_9;
+    private javax.swing.JButton btnResultado;
     private javax.swing.JComboBox<String> cboDivisaPrincipal;
     private javax.swing.JComboBox<String> cboDivisaSecundaria;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jblDivisa_1;
-    private javax.swing.JLabel jblDivisa_2;
-    private javax.swing.JLabel jblResultadoTitulo;
-    private javax.swing.JPanel jpConversor;
-    private javax.swing.JPanel jpTitulo;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelConversor;
     private javax.swing.JTextField jtxtDisplay;
     private javax.swing.JTextField jtxtResultado;
     // End of variables declaration//GEN-END:variables
+/*
+    class FondoPanel extends JPanel {
+        
+        private Image imagen;
+
+        @Override
+        public void paint(Graphics g) {
+            imagen = new ImageIcon(getClass().getResource("/icon/background.jpg")).getImage();
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+        }
+    }*/
+    
 }

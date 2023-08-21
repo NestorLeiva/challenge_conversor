@@ -37,7 +37,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
-        openMenuItem = new javax.swing.JMenuItem();
         saveMenuItem = new javax.swing.JMenuItem();
         saveAsMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
@@ -52,22 +51,12 @@ public class frmPrincipal extends javax.swing.JFrame {
         desktopPane.setMaximumSize(new java.awt.Dimension(800, 800));
 
         fileMenu.setMnemonic('f');
-        fileMenu.setText("File");
+        fileMenu.setText("Inicio");
         fileMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fileMenuActionPerformed(evt);
             }
         });
-
-        openMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hogar (2).png"))); // NOI18N
-        openMenuItem.setMnemonic('o');
-        openMenuItem.setText("Inicio");
-        openMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                openMenuItemActionPerformed(evt);
-            }
-        });
-        fileMenu.add(openMenuItem);
 
         saveMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/usd.png"))); // NOI18N
         saveMenuItem.setMnemonic('s');
@@ -102,11 +91,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuBar.add(fileMenu);
 
         helpMenu.setMnemonic('h');
-        helpMenu.setText("Help");
+        helpMenu.setText("Ayuda");
 
         aboutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/informacion.png"))); // NOI18N
         aboutMenuItem.setMnemonic('a');
-        aboutMenuItem.setText("Acerca de");
+        aboutMenuItem.setText("Acerca de este Programa");
         aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aboutMenuItemActionPerformed(evt);
@@ -152,12 +141,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         frm_ConDivisa.setVisible(true);
         
     }//GEN-LAST:event_saveMenuItemActionPerformed
-
-    private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
-        // Barra Meni Inicio... setea los objetos en False
- 
-        
-    }//GEN-LAST:event_openMenuItemActionPerformed
 
     private void fileMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileMenuActionPerformed
         // TODO add your handling code here:
@@ -230,7 +213,6 @@ public class frmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenuBar menuBar;
-    private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
     // End of variables declaration//GEN-END:variables
