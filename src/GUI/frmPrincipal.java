@@ -68,7 +68,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         });
         fileMenu.add(saveMenuItem);
 
-        saveAsMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ruta.png"))); // NOI18N
+        saveAsMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/termometro-mitad.png"))); // NOI18N
         saveAsMenuItem.setMnemonic('a');
         saveAsMenuItem.setText("Conversor Temperatura");
         saveAsMenuItem.addActionListener(new java.awt.event.ActionListener() {
