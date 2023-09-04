@@ -21,27 +21,27 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
         jpTitulo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jpConversor = new javax.swing.JPanel();
-        btnNumero_0 = new javax.swing.JButton();
         jtxtDisplay = new javax.swing.JTextField();
-        btnConvertir = new javax.swing.JButton();
         btnNumero_1 = new javax.swing.JButton();
-        btnNumeroPunto = new javax.swing.JButton();
         btnNumero_2 = new javax.swing.JButton();
-        jblTemperatura_1 = new javax.swing.JLabel();
         btnNumero_3 = new javax.swing.JButton();
         btnNumero_4 = new javax.swing.JButton();
-        jblResultadoTitulo = new javax.swing.JLabel();
         btnNumero_5 = new javax.swing.JButton();
-        btnNuevaConversion = new javax.swing.JButton();
         btnNumero_6 = new javax.swing.JButton();
-        jtxtResultado = new javax.swing.JTextField();
         btnNumero_7 = new javax.swing.JButton();
         btnNumero_8 = new javax.swing.JButton();
         btnNumero_9 = new javax.swing.JButton();
-        jblTemperatura_2 = new javax.swing.JLabel();
+        btnBorrar = new javax.swing.JButton();
+        btnNumero_0 = new javax.swing.JButton();
+        btnNumeroPunto = new javax.swing.JButton();
+        btnConvertir = new javax.swing.JButton();
+        jblTemperatura_1 = new javax.swing.JLabel();
         cboTemperaturaPrincipal = new javax.swing.JComboBox<>();
+        jblTemperatura_2 = new javax.swing.JLabel();
         cboTemperaturaSecundaria = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
+        jblResultadoTitulo = new javax.swing.JLabel();
+        jtxtResultado = new javax.swing.JTextField();
+        btnNuevaConversion = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -77,14 +77,6 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
 
         jpConversor.setBackground(new java.awt.Color(51, 51, 255));
 
-        btnNumero_0.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
-        btnNumero_0.setText("0");
-        btnNumero_0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNumero_0ActionPerformed(evt);
-            }
-        });
-
         jtxtDisplay.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         jtxtDisplay.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtxtDisplay.setMaximumSize(new java.awt.Dimension(100, 100));
@@ -99,27 +91,11 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
             }
         });
 
-        btnConvertir.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
-        btnConvertir.setText("Convertir");
-        btnConvertir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConvertirActionPerformed(evt);
-            }
-        });
-
         btnNumero_1.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         btnNumero_1.setText("1");
         btnNumero_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_1ActionPerformed(evt);
-            }
-        });
-
-        btnNumeroPunto.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
-        btnNumeroPunto.setText(".");
-        btnNumeroPunto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNumeroPuntoActionPerformed(evt);
             }
         });
 
@@ -130,10 +106,6 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
                 btnNumero_2ActionPerformed(evt);
             }
         });
-
-        jblTemperatura_1.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
-        jblTemperatura_1.setForeground(new java.awt.Color(255, 255, 255));
-        jblTemperatura_1.setText("Temperatura ");
 
         btnNumero_3.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         btnNumero_3.setText("3");
@@ -151,23 +123,11 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
             }
         });
 
-        jblResultadoTitulo.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
-        jblResultadoTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        jblResultadoTitulo.setText("Resultado");
-
         btnNumero_5.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         btnNumero_5.setText("5");
         btnNumero_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNumero_5ActionPerformed(evt);
-            }
-        });
-
-        btnNuevaConversion.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
-        btnNuevaConversion.setText("Nueva Conversion");
-        btnNuevaConversion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNuevaConversionActionPerformed(evt);
             }
         });
 
@@ -178,10 +138,6 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
                 btnNumero_6ActionPerformed(evt);
             }
         });
-
-        jtxtResultado.setEditable(false);
-        jtxtResultado.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
-        jtxtResultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         btnNumero_7.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         btnNumero_7.setText("7");
@@ -207,17 +163,69 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
             }
         });
 
-        jblTemperatura_2.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
-        jblTemperatura_2.setForeground(new java.awt.Color(255, 255, 255));
-        jblTemperatura_2.setText("Temperatura ");
+        btnBorrar.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/borrar.png"))); // NOI18N
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+
+        btnNumero_0.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
+        btnNumero_0.setText("0");
+        btnNumero_0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNumero_0ActionPerformed(evt);
+            }
+        });
+
+        btnNumeroPunto.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
+        btnNumeroPunto.setText(".");
+        btnNumeroPunto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNumeroPuntoActionPerformed(evt);
+            }
+        });
+
+        btnConvertir.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
+        btnConvertir.setText("Convertir");
+        btnConvertir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertirActionPerformed(evt);
+            }
+        });
+
+        jblTemperatura_1.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
+        jblTemperatura_1.setForeground(new java.awt.Color(255, 255, 255));
+        jblTemperatura_1.setText("Temperatura ");
 
         cboTemperaturaPrincipal.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         cboTemperaturaPrincipal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius", "Fahrenheit", "kelvin" }));
         cboTemperaturaPrincipal.setPreferredSize(new java.awt.Dimension(67, 30));
 
+        jblTemperatura_2.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
+        jblTemperatura_2.setForeground(new java.awt.Color(255, 255, 255));
+        jblTemperatura_2.setText("Temperatura ");
+
         cboTemperaturaSecundaria.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
         cboTemperaturaSecundaria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius", "Fahrenheit", "kelvin" }));
         cboTemperaturaSecundaria.setPreferredSize(new java.awt.Dimension(67, 30));
+
+        jblResultadoTitulo.setFont(new java.awt.Font("Comic Sans MS", 3, 24)); // NOI18N
+        jblResultadoTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jblResultadoTitulo.setText("Resultado");
+
+        jtxtResultado.setEditable(false);
+        jtxtResultado.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
+        jtxtResultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        btnNuevaConversion.setFont(new java.awt.Font("Comic Sans MS", 2, 24)); // NOI18N
+        btnNuevaConversion.setText("Nueva Conversion");
+        btnNuevaConversion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevaConversionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpConversorLayout = new javax.swing.GroupLayout(jpConversor);
         jpConversor.setLayout(jpConversorLayout);
@@ -246,12 +254,15 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
                         .addComponent(btnNumero_8, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnNumero_9, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jpConversorLayout.createSequentialGroup()
-                            .addComponent(btnNumero_0, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnNumeroPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jpConversorLayout.createSequentialGroup()
+                        .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jpConversorLayout.createSequentialGroup()
+                                .addComponent(btnNumero_0, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnNumeroPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,20 +317,20 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
                         .addGroup(jpConversorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnNumero_0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnNumeroPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jpConversorLayout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(btnConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jpConversorLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(btnNuevaConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 99, Short.MAX_VALUE))))
+                        .addGap(0, 115, Short.MAX_VALUE))))
         );
 
         getContentPane().add(jpConversor, java.awt.BorderLayout.CENTER);
-
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, java.awt.BorderLayout.PAGE_END);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -425,8 +436,18 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
         jtxtDisplay.setText(jtxtDisplay.getText() + "9");
     }//GEN-LAST:event_btnNumero_9ActionPerformed
 
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        // TODO add your handling code here:
+        if (jtxtDisplay.getText().length() != 0) {
+            jtxtDisplay.setText(jtxtDisplay.getText().substring(0, jtxtDisplay.getText().length()-1));
+        }
+        
+        
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnConvertir;
     private javax.swing.JButton btnNuevaConversion;
     private javax.swing.JButton btnNumeroPunto;
@@ -443,7 +464,6 @@ public class frmConversorTemperatura extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> cboTemperaturaPrincipal;
     private javax.swing.JComboBox<String> cboTemperaturaSecundaria;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jblResultadoTitulo;
     private javax.swing.JLabel jblTemperatura_1;
     private javax.swing.JLabel jblTemperatura_2;
