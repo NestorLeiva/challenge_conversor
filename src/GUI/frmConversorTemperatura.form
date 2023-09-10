@@ -198,13 +198,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnNumero_0" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="btnNumeroPunto" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="jtxtResultado" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                   <Component id="btnBorrar" min="-2" pref="45" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="btnNumero_0" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="btnNumeroPunto" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="jtxtResultado" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
