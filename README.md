@@ -7,3 +7,6 @@
 
 	 El archivo ejecutable requier JDK 20 * 
 -------------------------------------------------------------------------------------------------------------
+
+
+https://raw.githubusercontent.com/NestorLeiva/challenge_conversor/master/assets/imgDivisa.png
