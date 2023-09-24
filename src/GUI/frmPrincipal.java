@@ -40,8 +40,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         saveMenuItem = new javax.swing.JMenuItem();
         saveAsMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
-        helpMenu = new javax.swing.JMenu();
-        aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Challenge Conversor");
@@ -89,21 +87,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         fileMenu.add(exitMenuItem);
 
         menuBar.add(fileMenu);
-
-        helpMenu.setMnemonic('h');
-        helpMenu.setText("Ayuda");
-
-        aboutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/informacion.png"))); // NOI18N
-        aboutMenuItem.setMnemonic('a');
-        aboutMenuItem.setText("Acerca de este Programa");
-        aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aboutMenuItemActionPerformed(evt);
-            }
-        });
-        helpMenu.add(aboutMenuItem);
-
-        menuBar.add(helpMenu);
 
         setJMenuBar(menuBar);
 
@@ -160,17 +143,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
 
-    private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
-        /**
-         * Se crea e inicializa el objeto
-         * se anade el objeto al objeto principal 
-         * luego se indica que sea visible
-         */
-        frmAbout frm_about = new frmAbout();
-        this.desktopPane.add(frm_about);
-        frm_about.setVisible(true);
-    }//GEN-LAST:event_aboutMenuItemActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -207,11 +179,9 @@ public class frmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
-    private javax.swing.JMenu helpMenu;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
