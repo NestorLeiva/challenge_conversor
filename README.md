@@ -8,15 +8,6 @@
 	 El archivo ejecutable requier JDK 20 * 
 
 
-
-<span>
-	![</span><span> CalculadoraConversorDivisa]</span><span>
-		(</span><span>
-			  https://raw.githubusercontent.com/NestorLeiva/challenge_conversor/master/assets/imgDivisa.png
-		</span><span>)
-</span>
-
-
 -------------------------------------------------------------------------------------------------------------
 
 
